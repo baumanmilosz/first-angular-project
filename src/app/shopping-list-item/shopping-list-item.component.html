@@ -1,1 +1,21 @@
-<button *ngIf="product.exportCountry" (click)="notify.emit()">Show info</button>
+<li class="product-item">
+  <a [routerLink]="['/shopping-list', product.id]">{{product.name}}</a>,
+  <span>{{product.price}} zł</span>
+  <button type="button" (click)="addToCart()" class="add-to-cart-btn">Add to cart</button>
+  <button *ngIf="product.exportCountry" (click)="notify.emit()">Show info</button>
+</li>
+
+<style>
+
+
+  .add-to-cart-btn {
+    display: block;
+  }
+
+  .product-item {
+    margin-bottom: 10px;
+  }
+</style>
+
+
+

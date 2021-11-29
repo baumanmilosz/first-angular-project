@@ -1,4 +1,5 @@
-<h2>Shopping list</h2>
-<table class="table align-items-center table-flush">
-    <li *ngFor="let header of this.products">{{header}}</li>
-</table>
+<ul>
+  <app-shopping-list-item *ngFor="let product of products"
+    [product]="product" (notify)="onNotify(product.exportCountry)">
+  </app-shopping-list-item>
+</ul>

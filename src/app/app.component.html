@@ -1,13 +1,3 @@
-<ul>
-<li *ngFor="let product of products" class="product-item">{{product.name}}, {{product.price}} zł
-     <a *ngIf="product.link" [href]="product.link" class="product-link">- {{product.link}}</a>
-    <button type="button" (click)="addToCart()" class="add-to-cart-btn">Add to cart</button>
-  <app-shopping-list-item
-    [product]="product" (notify)="onNotify(product.exportCountry)">
-  </app-shopping-list-item>
-</li>
-
-</ul>
 
 <style>
   :host {
@@ -17,18 +7,6 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  .product-link {
-    display: block;
-  }
-
-  .add-to-cart-btn {
-    display: block;
-  }
-
-  .product-item:not(:last-of-type) {
-    margin-bottom: 10px;
   }
 </style>
 
