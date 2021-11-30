@@ -14,9 +14,9 @@ export const products = [{
   }];
 
 export interface Product {
-  id: string,
-  name: string,
-  price: number,
-  exportCountry: string | null,
-  link: string
+  id: any,
+  name: any,
+  price: any,
+  exportCountry: any,
+  link: any
 }
